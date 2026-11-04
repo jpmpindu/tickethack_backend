@@ -13,5 +13,5 @@ const connectDB = async () => {
     process.exit(1);
   }
 };
-
+connectDB(); // Appeler la fonction pour se connecter à la base de données
 // module.exports = connectDB;

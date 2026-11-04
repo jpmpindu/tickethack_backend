@@ -2,7 +2,7 @@
 // app.js : configuration de l'application Express
 // (le serveur est démarré dans bin/www)
 // ==========================================================
-
+require('./models/connection'); // Se connecter à MongoDB avant de configurer l'application
 // ----- Importer les bibliothèques -----
 
 // Express : le framework qui gère les routes et les requêtes HTTP
