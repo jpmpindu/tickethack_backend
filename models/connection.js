@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
-
+const uri = process.env.MONGODB_URI;
+console.log('MONGODB_URI:', uri); // Affiche l'URI pour vérifier qu'il est bien chargé depuis .env
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI, {
+    await mongoose.connect(uri, {
       connectTimeoutMS: 2000,
     });
 
