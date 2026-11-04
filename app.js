@@ -39,11 +39,7 @@ var app = express();
 // ----- Middlewares : exécutés pour chaque requête, dans cet ordre -----
 
 // Autoriser les requêtes venant d'autres adresses (le frontend)
-app.use(
-  cors({
-    origin: 'tickethackfrontend-six.vercel.app',
-  }),
-);
+app.use(cors());
 // Afficher chaque requête dans le terminal, en mode "dev" (coloré et court)
 app.use(logger('dev'));
 // Lire le JSON envoyé par le frontend et le ranger dans req.body
