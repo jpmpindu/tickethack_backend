@@ -6,7 +6,7 @@ const connectDB = async () => {
       connectTimeoutMS: 2000,
     });
 
-    console.log('Database connected');
+    console.info('Database connected');
   } catch (error) {
     console.error('Database connection failed:', error.message);
     process.exit(1);
